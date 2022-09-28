@@ -1,0 +1,15 @@
+#!/bin/sh
+
+PATH=./bin/:"$PATH"
+GREEN="\e[1;32m"
+RED="\e[31m"
+
+echo "RESULTS Kruksal:\n" > ResultsKruksal.txt
+for graphe in Graphes/*.txt
+do 
+    
+    ./bin/testKruksal "$graphe" >> ResultsKruksal.txt
+    echo "\n" >> ResultsKruksal.txt
+    
+done
+
